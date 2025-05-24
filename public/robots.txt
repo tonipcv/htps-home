@@ -1,4 +1,17 @@
+# Allow all crawlers
 User-agent: *
 Allow: /
 
-Sitemap: https://boop.tech/sitemap.xml 
+# Sitemap location
+Sitemap: https://htps.io/sitemap.xml
+
+# Prevent crawling of admin pages
+Disallow: /admin/
+Disallow: /api/
+
+# Allow important pages
+Allow: /demo
+Allow: /partners
+
+# Crawl delay
+Crawl-delay: 10 

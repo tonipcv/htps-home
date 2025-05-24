@@ -1,16 +1,17 @@
 {
-  "name": "MED1 - Smart Healthcare CRM",
-  "short_name": "MED1",
-  "description": "Transform your medical practice with our intelligent CRM. Increase patient acquisition and retention through smart referrals.",
+  "name": "HTPS - High Ticket Profit System",
+  "short_name": "HTPS",
+  "description": "Transform your business with HTPS - The ultimate high-ticket sales platform",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#ffffff",
-  "theme_color": "#2E8DFF",
+  "background_color": "#000000",
+  "theme_color": "#000000",
   "icons": [
     {
-      "src": "/favicon.ico",
-      "sizes": "64x64 32x32 24x24 16x16",
-      "type": "image/x-icon"
+      "src": "/icon.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
     },
     {
       "src": "/apple-touch-icon.png",

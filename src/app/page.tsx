@@ -43,22 +43,16 @@ export default function HomePage() {
             <img src="/logo.png" alt="Logo" className="h-8 brightness-0 invert" />
             
             {/* Desktop Navigation */}
-            <div className="hidden md:flex items-center space-x-6">
-              <a href="/partners" className="text-sm text-zinc-400 hover:text-white transition-colors duration-200 tracking-[-0.03em]">
+            <div className="hidden md:flex items-center space-x-10">
+              <a href="/partners" className="text-zinc-400 hover:text-white transition-colors text-sm tracking-[-0.03em]">
                 Partners
               </a>
-              <a href="/pricing" className="text-sm text-zinc-400 hover:text-white transition-colors duration-200 tracking-[-0.03em]">
-                Pricing
-              </a>
-              <div className="flex items-center gap-4 bg-zinc-900/50 px-4 py-2 rounded-full border border-zinc-800">
-                <Button 
-                  onClick={() => window.location.href = 'https://www.htsp.app/auth/signin'}
-                  className="text-sm text-white hover:text-zinc-300 transition-colors duration-200 flex items-center gap-1 tracking-[-0.03em]"
-                >
-                  Sign In
-                  <ArrowRightIcon className="w-3 h-3" />
-                </Button>
-              </div>
+              <Button 
+                onClick={() => window.location.href = 'https://htps.io'}
+                className="bg-zinc-900/80 text-white hover:bg-zinc-800 transition-all duration-300 px-4 sm:px-8 py-2.5 sm:py-3 text-sm font-light tracking-[-0.03em] rounded-full border border-zinc-700/50 shadow-[0_0_15px_rgba(255,255,255,0.05)] hover:shadow-[0_0_25px_rgba(255,255,255,0.1)] hover:border-zinc-600 hover:scale-105 active:scale-95"
+              >
+                Sign In
+              </Button>
             </div>
 
             {/* Mobile Menu Button */}
@@ -108,33 +102,23 @@ export default function HomePage() {
                   </button>
                 </div>
                 
-                <div className="flex flex-col space-y-6">
+                <div className="flex flex-col space-y-4">
                   <a
                     href="/partners"
-                    className="text-sm text-zinc-400 hover:text-white transition-colors duration-200 tracking-[-0.03em]"
+                    className="text-base text-zinc-400 hover:text-white transition-colors tracking-[-0.03em] py-2"
                     onClick={() => setIsMenuOpen(false)}
                   >
                     Partners
                   </a>
-                  <a
-                    href="/pricing"
-                    className="text-sm text-zinc-400 hover:text-white transition-colors duration-200 tracking-[-0.03em]"
-                    onClick={() => setIsMenuOpen(false)}
+                  <Button
+                    onClick={() => {
+                      window.location.href = 'https://htps.io';
+                      setIsMenuOpen(false);
+                    }}
+                    className="w-full bg-zinc-900/80 text-white hover:bg-zinc-800 transition-all duration-300 px-4 sm:px-8 py-2.5 sm:py-3 text-sm font-light tracking-[-0.03em] rounded-full border border-zinc-700/50 shadow-[0_0_15px_rgba(255,255,255,0.05)] hover:shadow-[0_0_25px_rgba(255,255,255,0.1)] hover:border-zinc-600 hover:scale-105 active:scale-95"
                   >
-                    Pricing
-                  </a>
-                  <div className="flex items-center gap-4 bg-zinc-900/50 px-4 py-2 rounded-full border border-zinc-800">
-                    <Button
-                      onClick={() => {
-                        handleDemoClick();
-                        setIsMenuOpen(false);
-                      }}
-                      className="text-sm text-white hover:text-zinc-300 transition-colors duration-200 flex items-center gap-1 tracking-[-0.03em]"
-                    >
-                      Sign In
-                      <ArrowRightIcon className="w-3 h-3" />
-                    </Button>
-                  </div>
+                    Sign In
+                  </Button>
                 </div>
               </div>
             </motion.div>
