@@ -1,0 +1,21 @@
+{
+  "name": "MED1 - Smart Healthcare CRM",
+  "short_name": "MED1",
+  "description": "Transform your medical practice with our intelligent CRM. Increase patient acquisition and retention through smart referrals.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#2E8DFF",
+  "icons": [
+    {
+      "src": "/favicon.ico",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    }
+  ]
+} 

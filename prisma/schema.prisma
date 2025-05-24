@@ -1,0 +1,64 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model DemoRequest {
+  id        String   @id @default(cuid())
+  name      String
+  email     String
+  phone     String?
+  specialty String?
+  whatsapp  String?
+  speciality String?
+  bestTime  String?
+  status    String   @default("PENDING") // PENDING, SCHEDULED, COMPLETED, CANCELLED
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model InsideSalesLead {
+  id            Int      @id @default(autoincrement())
+  name          String
+  email         String
+  whatsapp      String
+  instagram     String
+  area          String
+  employees     String
+  revenue       String
+  useTechnology String
+  status        String   @default("new")
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+}
+
+model Lead {
+  id         String   @id @default(cuid())
+  name       String
+  whatsapp   String
+  email      String
+  segment    String?
+  budget     String?
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+  profession String
+}
+
+model ProposalLead {
+  id              Int      @id @default(autoincrement())
+  name            String
+  email           String
+  whatsapp        String
+  profession      String
+  knowsTechnology String   @default("Não")
+  revenue         String   @default("Não informado")
+  status          String   @default("new")
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+
+  @@map("proposal_leads")
+}
